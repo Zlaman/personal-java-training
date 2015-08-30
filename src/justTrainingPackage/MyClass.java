@@ -23,8 +23,8 @@ public class MyClass {
     }
 
     public static void main(String[] args) {
-        MyClass c1 = new MyClass(10, "À¿À¿À¿", 50);
-        MyClass c2 = new MyClass(100, "’ÀŒ", 540);
+        MyClass c1 = new MyClass(10, "–õ–ê–õ–ê–õ–ê", 50);
+        MyClass c2 = new MyClass(100, "–•–õ–û", 540);
         String[] testS = { "hello", "world" };
         c1.test(testS);
     }
