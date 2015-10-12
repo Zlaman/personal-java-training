@@ -1,14 +1,14 @@
 package libs.junit;
 
-import static org.junit.Assert.*;
-import static org.junit.Assume.*;
-
-import org.junit.Test;
 import org.junit.Ignore;
+import org.junit.Test;
 import org.junit.experimental.theories.DataPoints;
 import org.junit.experimental.theories.Theories;
 import org.junit.experimental.theories.Theory;
 import org.junit.runner.RunWith;
+
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assume.assumeTrue;
 
 @RunWith(Theories.class)
 public class JunitTest {
@@ -23,7 +23,7 @@ public class JunitTest {
     }
 
     @Test
-    @Ignore
+    @Ignore(value = "NOT DONE YET")
     public void thisIsIgnored() {
     }
 

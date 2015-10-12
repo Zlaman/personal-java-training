@@ -14,18 +14,21 @@ public class MyClass {
 
     public void test(String[] args) {
         try {
-            for (int i = 0; i <= args.length; i++) {
-                System.out.println(args[i]);
+            for (String arg : args) {
+                System.out.println(arg);
             }
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("WTF are you doing");
         }
+        ZClass z = new ZClass();
+        System.out.println(z.test);
     }
 
     public static void main(String[] args) {
-        MyClass c1 = new MyClass(10, "ËÀËÀËÀ", 50);
-        MyClass c2 = new MyClass(100, "ÕËÎ", 540);
+        MyClass c1 = new MyClass(10, "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", 50);
+        MyClass c2 = new MyClass(100, "ï¿½ï¿½ï¿½", 540);
         String[] testS = { "hello", "world" };
         c1.test(testS);
     }
+
 }

@@ -1,27 +1,27 @@
 package exceptions;
 
 public class Implementation {
-    
-    // Выброс и обработка Exception
+
+    // Р’С‹Р±СЂРѕСЃ Рё РѕР±СЂР°Р±РѕС‚РєР° Exception
     static void exception(){
-        // запрещает throw завершать работу метода
+        // Р·Р°РїСЂРµС‰Р°РµС‚ throw Р·Р°РІРµСЂС€Р°С‚СЊ СЂР°Р±РѕС‚Сѓ РјРµС‚РѕРґР°
         try{
-            // возбуждение исключения
+            // РІРѕР·Р±СѓР¶РґРµРЅРёРµ РёСЃРєР»СЋС‡РµРЅРёСЏ
             throw new NullPointerException("t = null");
         }
-        // обработчик исключения NullPointerException
+        // РѕР±СЂР°Р±РѕС‚С‡РёРє РёСЃРєР»СЋС‡РµРЅРёСЏ NullPointerException
         catch (NullPointerException e){
             e.printStackTrace(System.err);
-        }  // обработчик исключения Exception
+        }  // РѕР±СЂР°Р±РѕС‚С‡РёРє РёСЃРєР»СЋС‡РµРЅРёСЏ Exception
         catch (Exception e){
-            
-        } // Выполняется после выхода из try. Завершающий метод.
+
+        } // Р’С‹РїРѕР»РЅСЏРµС‚СЃСЏ РїРѕСЃР»Рµ РІС‹С…РѕРґР° РёР· try. Р—Р°РІРµСЂС€Р°СЋС‰РёР№ РјРµС‚РѕРґ.
         finally {
             System.out.println("FINAL");
         }
     }
-    
-    // Мой Exception
+
+    // РњРѕР№ Exception
     static void myException(){
         try{
             throw new MyException();
@@ -33,7 +33,8 @@ public class Implementation {
             System.err.println("Exception appeared: " + e);
         }
     }
-    // throws отображает все возможные необработанные типы исключений
+
+    // throws РѕС‚РѕР±СЂР°Р¶Р°РµС‚ РІСЃРµ РІРѕР·РјРѕР¶РЅС‹Рµ РЅРµРѕР±СЂР°Р±РѕС‚Р°РЅРЅС‹Рµ С‚РёРїС‹ РёСЃРєР»СЋС‡РµРЅРёР№
     static void unhandeledException() throws MyException{
         throw new MyException();
     }
@@ -49,7 +50,7 @@ public class Implementation {
             for (StackTraceElement s : e.getStackTrace()){
                 System.err.println(s);
             }
-        // Повторное возбуждение эксепшена
+            // РџРѕРІС‚РѕСЂРЅРѕРµ РІРѕР·Р±СѓР¶РґРµРЅРёРµ СЌРєСЃРµРїС€РµРЅР°
         throw(e);
         }
         catch (Exception e){
