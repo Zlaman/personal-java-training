@@ -11,7 +11,7 @@ import org.junit.experimental.theories.Theory;
 import org.junit.runner.RunWith;
 
 @RunWith(Theories.class)
-public class JunitTest {
+public class JUnitTest {
 
         @DataPoints
         public static Boolean A1 = true;
